@@ -24,8 +24,7 @@ RUN wget -nc -q https://download.docker.com/linux/debian/dists/stretch/pool/stab
 ARG DOCKER_COMPOSE_VERSION=1.24.0
 
 RUN dpkg -i /tmp/docker.deb || true && \
-    DEBIAN_FRONTEND=noninteractive apt-get -f -y install
-RUN curl -s -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
-    chmod +x /usr/local/bin/docker-compose
-#    && \
-#    rm -f /tmp/docker.deb /tmp/requirements.txt
+    DEBIAN_FRONTEND=noninteractive apt-get -f -y install && \
+    curl -s -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
+    chmod +x /usr/local/bin/docker-compose && \
+    rm -f /tmp/docker.deb /tmp/requirements.txt
