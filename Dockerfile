@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER marcus.rickert@web.de
 
 COPY assets/requirements.txt /tmp/

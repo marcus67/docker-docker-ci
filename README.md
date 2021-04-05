@@ -7,5 +7,5 @@ with
 * Python3 with modules
   * jinja2
 
-pre-installed.
+pre-installed and using Debian Buster as base image.
 
