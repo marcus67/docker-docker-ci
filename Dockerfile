@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:stable-slim
 MAINTAINER marcus.rickert@web.de
 
 COPY assets/requirements.txt /tmp/
